@@ -2,21 +2,55 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Видео 1 — Добро пожаловать</title>
+  <title>Lemon Mall — Добро пожаловать</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(135deg, #000000, #1a0f00);
+      color: white;
+      background-image: radial-gradient(circle at top left, rgba(255,215,0,0.1), transparent),
+                        radial-gradient(circle at bottom right, rgba(255,215,0,0.15), transparent);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    .button {
+      padding: 14px 28px;
+      margin: 10px;
+      font-size: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+    .start {
+      background-color: #ffc107;
+      color: #000;
+    }
+    .exit {
+      background-color: #444;
+      color: #fff;
+    }
+    h1 {
+      font-size: 32px;
+      margin-top: 50px;
+    }
+    p {
+      font-size: 18px;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+  </style>
 </head>
-<body style="text-align:center; font-family:sans-serif; padding:20px">
-  <h1>Привет! Меня зовут Мадина</h1>
+<body>
+  <h1>Добро пожаловать в Lemon Mall</h1>
+  <p>Сейчас ты узнаешь, как можно стать совладельцем международного маркетплейса, вложив всего $1000.</p>
 
-  <p>Посмотри это короткое видео — я расскажу, почему приглашаю тебя в этот проект.</p>
-
-  <iframe width="100%" height="360" 
-    src="https://www.youtube.com/embed/4tR7pSda5YQ?rel=0" 
-    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-  </iframe>
-
-  <br><br>
-  <a href="video2.html" style="padding:10px 20px; background:#ffc107; color:#000; text-decoration:none; border-radius:5px;">
-    👉 Перейти к следующему видео
-  </a>
+  <a href="video2.html" class="button start">🚀 Начать просмотр</a>
+  <a href="https://wa.me/77085080140?text=Спасибо,%20не%20интересно" class="button exit">🚪 Выйти</a>
 </body>
 </html>
