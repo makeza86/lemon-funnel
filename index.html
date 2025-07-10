@@ -24,7 +24,7 @@
       transition: background 0.3s ease;
     }
     .yes {
-      background-color: #4CAF50;
+      background-color: #1E90FF; /* синий */
       color: #fff;
     }
     .no {
@@ -45,23 +45,28 @@
     h1 {
       font-size: 30px;
       margin-bottom: 20px;
+      color: #FFD700; /* золотой */
     }
     p {
       font-size: 18px;
       max-width: 600px;
       margin: 0 auto 30px auto;
     }
+    strong.brand {
+      color: #FFD700; /* золотой */
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
   <h1>Добро пожаловать!</h1>
-  <p>Посмотри это короткое видео, чтобы узнать, как ты можешь изменить свою жизнь с Lemon Mall.</p>
+  <p>Посмотри это короткое видео, чтобы узнать, как ты можешь изменить свою жизнь с <strong class="brand">Lemon Mall</strong>.</p>
 
   <div class="video-container">
     <iframe src="https://www.youtube.com/embed/4tR7pSda5YQ?rel=0" allowfullscreen></iframe>
   </div>
 
-  <a href="video2.html" class="button yes">👍 Да, интересно!</a>
-  <a href="https://wa.me/77085080140?text=Спасибо,%20не%20интересно" class="button no">🚪 Не интересно</a>
+  <a href="video2.html" class="button yes">Да, интересно</a>
+  <a href="https://wa.me/77085080140?text=Спасибо,%20не%20интересно" class="button no">Не интересно</a>
 </body>
 </html>
