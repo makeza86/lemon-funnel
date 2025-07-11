@@ -16,14 +16,20 @@
     }
     .button {
       padding: 14px 28px;
-      margin: 10px;
+      margin: 15px auto;
       font-size: 20px;
       border: none;
-      border-radius: 10px;
+      border-radius: 12px;
       cursor: pointer;
       text-decoration: none;
-      display: inline-block;
-      transition: background 0.3s ease;
+      display: block;
+      width: 90%;
+      max-width: 320px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s ease, background 0.3s ease;
+    }
+    .button:hover {
+      transform: translateY(-2px);
     }
     .green {
       background-color: #28a745;
