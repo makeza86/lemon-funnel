@@ -5,38 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Добро пожаловать в маркетплейс Lemon Mall</title>
 
-  <!-- SEO и Open Graph -->
+  <!-- SEO мета-теги -->
   <meta name="description" content="Присоединяйтесь к маркетплейсу Lemon Mall от HUAGE – начните зарабатывать на премиальных товарах, автозапчастях и технологиях будущего уже сегодня!">
   <meta name="keywords" content="Lemon Mall, HUAGE, маркетплейс, бизнес, автозапчасти, электроавтомобили, сетевой маркетинг, заработок, Baishi Health">
+  <meta name="author" content="HUAGE Kazakhstan">
+
+  <!-- Open Graph -->
   <meta property="og:title" content="Маркетплейс Lemon Mall — старт твоего бизнеса!">
   <meta property="og:description" content="Всё, что нужно для успеха — в одном месте. Начни сегодня с Lemon Mall.">
   <meta property="og:image" content="https://lemonmall.kz/images/preview.jpg">
   <meta property="og:url" content="https://lemonmall.kz">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ru_RU">
-  <meta name="author" content="HUAGE Kazakhstan">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-  <!-- JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "VideoObject",
-    "name": "Маркетплейс Lemon Mall — Презентация",
-    "description": "Узнай, как изменить свою жизнь с маркетплейсом Lemon Mall от HUAGE. Начни зарабатывать с нами уже сегодня!",
-    "thumbnailUrl": "https://lemonmall.kz/images/preview.jpg",
-    "uploadDate": "2025-07-15",
-    "contentUrl": "https://lemonmall.kz/videos/video1.mp4",
-    "publisher": {
-      "@type": "Organization",
-      "name": "HUAGE Kazakhstan",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://lemonmall.kz/favicon.ico"
-      }
-    }
-  }
-  </script>
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 
   <style>
     * { box-sizing: border-box; }
@@ -72,48 +55,55 @@
       position: relative;
       width: 100%;
       max-width: 640px;
-      aspect-ratio: 16 / 9;
+      aspect-ratio: 16/9;
       margin: 0 auto 30px auto;
-      box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
       border-radius: 16px;
       overflow: hidden;
+      box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+      background: radial-gradient(circle at center, rgba(255, 215, 0, 0.2), transparent 70%);
+      animation: glow 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      0% { box-shadow: 0 0 30px rgba(255, 215, 0, 0.4); }
+      100% { box-shadow: 0 0 60px rgba(255, 215, 0, 0.8); }
     }
 
     .custom-video-wrapper video {
       width: 100%;
       height: 100%;
-      display: block;
       object-fit: cover;
       border-radius: 16px;
-      filter: brightness(1.1) contrast(1.1);
     }
 
-    .custom-controls {
+    .video-controls {
       position: absolute;
-      top: 50%;
+      bottom: 10px;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translateX(-50%);
       display: flex;
-      gap: 20px;
-      z-index: 2;
+      gap: 12px;
+      z-index: 10;
     }
 
-    .custom-btn {
-      background-color: rgba(255, 215, 0, 0.85);
-      color: black;
+    .video-button {
+      background-color: rgba(255, 215, 0, 0.9);
       border: none;
+      color: black;
+      font-size: 20px;
       border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      font-size: 24px;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+      transition: transform 0.2s;
     }
 
-    .custom-btn:hover {
+    .video-button:hover {
       transform: scale(1.1);
-      background-color: #ffd700;
     }
 
     h1 {
@@ -121,15 +111,12 @@
       margin-bottom: 20px;
       color: #FFD700;
     }
-
     p {
       font-size: 4.5vw;
       max-width: 600px;
       margin: 0 auto 30px auto;
     }
-
     strong.brand { color: #FFD700; font-weight: bold; }
-
     @media (min-width: 768px) {
       h1 { font-size: 30px; }
       p { font-size: 18px; }
@@ -145,9 +132,10 @@
       <source src="videos/video1.mp4" type="video/mp4">
       Ваш браузер не поддерживает видео.
     </video>
-    <div class="custom-controls">
-      <button id="backBtn" class="custom-btn">⏪</button>
-      <button id="playPauseBtn" class="custom-btn">▶</button>
+    <div class="video-controls">
+      <button class="video-button" onclick="rewind()">⏪</button>
+      <button class="video-button" onclick="togglePlayPause()" id="playPauseBtn">▶</button>
+      <button class="video-button" onclick="stopVideo()">⏹</button>
     </div>
   </div>
 
@@ -157,9 +145,8 @@
   <script>
     const video = document.getElementById('myVideo');
     const playPauseBtn = document.getElementById('playPauseBtn');
-    const backBtn = document.getElementById('backBtn');
 
-    playPauseBtn.addEventListener('click', () => {
+    function togglePlayPause() {
       if (video.paused) {
         video.play();
         playPauseBtn.textContent = '⏸';
@@ -167,11 +154,17 @@
         video.pause();
         playPauseBtn.textContent = '▶';
       }
-    });
+    }
 
-    backBtn.addEventListener('click', () => {
+    function stopVideo() {
+      video.pause();
+      video.currentTime = 0;
+      playPauseBtn.textContent = '▶';
+    }
+
+    function rewind() {
       video.currentTime = Math.max(0, video.currentTime - 10);
-    });
+    }
 
     video.addEventListener('ended', () => {
       playPauseBtn.textContent = '▶';
