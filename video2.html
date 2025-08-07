@@ -37,7 +37,7 @@
     }
     .button:hover { transform: translateY(-2px); }
     .blue { background-color: #1E00FF; color: #fff; }
-    .gray { background-color: #333; color: #fff; }
+    .red-light { background-color: #ff4d4d; color: #fff; }
 
     .custom-video-wrapper {
       position: relative;
@@ -94,6 +94,19 @@
     .video-button:hover {
       transform: scale(1.1);
     }
+
+    .seo-description {
+      max-width: 700px;
+      margin: 40px auto 20px auto;
+      text-align: left;
+      color: #ddd;
+      font-size: 16px;
+      line-height: 1.6;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+    }
   </style>
 </head>
 <body>
@@ -112,8 +125,21 @@
     </div>
   </div>
 
-  <a href="video1.html" class="button gray">Назад</a>
   <a href="video3.html" class="button blue">Смотреть дальше</a>
+  <a href="video1.html" class="button red-light">Назад</a>
+
+  <section class="seo-description">
+    <h2>Описание видео: возможности партнёрства с Lemon Mall</h2>
+    <p>
+      Во втором видео Мадина делится своими впечатлениями от маркетплейса <strong>Lemon Mall</strong>, который продвигается через СНГ как аналог Amazon и Alibaba. За проектом стоит компания <strong>HUAGE</strong> — официальный филиал китайской корпорации <strong>Baishi Health</strong>, владеющей собственными заводами и научными лабораториями.
+    </p>
+    <p>
+      Благодаря партнёрской программе каждый человек может стать частью глобального бизнеса, начать зарабатывать пассивно и даже получить <strong>акции самого маркетплейса Lemon Mall</strong>. Уникальное преимущество — возможность выводить деньги ежедневно и участвовать в развитии проекта с самых ранних этапов.
+    </p>
+    <p>
+      Это не просто сетевой бизнес, а реальный шанс для тех, кто ищет <em>возможность заработка без продаж</em>, хочет <em>выйти на международный рынок</em> и <em>иметь стабильный доход</em>. Смотри следующее видео, чтобы узнать больше!
+    </p>
+  </section>
 
   <script>
     const video = document.getElementById('myVideo');
