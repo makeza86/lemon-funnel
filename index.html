@@ -5,23 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Добро пожаловать в маркетплейс Lemon Mall</title>
 
-  <!-- SEO мета-теги -->
+  <!-- SEO и Open Graph -->
   <meta name="description" content="Присоединяйтесь к маркетплейсу Lemon Mall от HUAGE – начните зарабатывать на премиальных товарах, автозапчастях и технологиях будущего уже сегодня!">
   <meta name="keywords" content="Lemon Mall, HUAGE, маркетплейс, бизнес, автозапчасти, электроавтомобили, сетевой маркетинг, заработок, Baishi Health">
-  <meta name="author" content="HUAGE Kazakhstan">
-
-  <!-- Open Graph -->
   <meta property="og:title" content="Маркетплейс Lemon Mall — старт твоего бизнеса!">
   <meta property="og:description" content="Всё, что нужно для успеха — в одном месте. Начни сегодня с Lemon Mall.">
   <meta property="og:image" content="https://lemonmall.kz/images/preview.jpg">
   <meta property="og:url" content="https://lemonmall.kz">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ru_RU">
-
-  <!-- Favicon -->
+  <meta name="author" content="HUAGE Kazakhstan">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-  <!-- JSON-LD Structured Data -->
+  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -76,6 +72,7 @@
       position: relative;
       width: 100%;
       max-width: 640px;
+      aspect-ratio: 16 / 9;
       margin: 0 auto 30px auto;
       box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
       border-radius: 16px;
@@ -84,32 +81,38 @@
 
     .custom-video-wrapper video {
       width: 100%;
-      height: auto;
+      height: 100%;
       display: block;
+      object-fit: cover;
       border-radius: 16px;
       filter: brightness(1.1) contrast(1.1);
     }
 
-    .custom-play-button {
+    .custom-controls {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      display: flex;
+      gap: 20px;
+      z-index: 2;
+    }
+
+    .custom-btn {
       background-color: rgba(255, 215, 0, 0.85);
       color: black;
       border: none;
       border-radius: 50%;
-      width: 70px;
-      height: 70px;
-      font-size: 28px;
+      width: 60px;
+      height: 60px;
+      font-size: 24px;
       cursor: pointer;
       transition: all 0.3s ease;
       box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
-      z-index: 2;
     }
 
-    .custom-play-button:hover {
-      transform: translate(-50%, -50%) scale(1.1);
+    .custom-btn:hover {
+      transform: scale(1.1);
       background-color: #ffd700;
     }
 
@@ -142,7 +145,10 @@
       <source src="videos/video1.mp4" type="video/mp4">
       Ваш браузер не поддерживает видео.
     </video>
-    <button id="playPauseBtn" class="custom-play-button">▶</button>
+    <div class="custom-controls">
+      <button id="backBtn" class="custom-btn">⏪</button>
+      <button id="playPauseBtn" class="custom-btn">▶</button>
+    </div>
   </div>
 
   <a href="video2.html" class="button blue">Да, интересно</a>
@@ -150,17 +156,25 @@
 
   <script>
     const video = document.getElementById('myVideo');
-    const btn = document.getElementById('playPauseBtn');
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    const backBtn = document.getElementById('backBtn');
 
-    btn.addEventListener('click', () => {
+    playPauseBtn.addEventListener('click', () => {
       if (video.paused) {
         video.play();
-        btn.style.display = 'none';
+        playPauseBtn.textContent = '⏸';
+      } else {
+        video.pause();
+        playPauseBtn.textContent = '▶';
       }
     });
 
+    backBtn.addEventListener('click', () => {
+      video.currentTime = Math.max(0, video.currentTime - 10);
+    });
+
     video.addEventListener('ended', () => {
-      btn.style.display = 'block';
+      playPauseBtn.textContent = '▶';
     });
   </script>
 </body>
