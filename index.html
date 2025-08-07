@@ -71,30 +71,62 @@
     .button:hover { transform: translateY(-2px); }
     .blue { background-color: #1E00FF; color: #fff; }
     .red { background-color: #8B0000; color: #fff; }
-    .video-container {
+
+    .custom-video-wrapper {
+      position: relative;
       width: 100%;
       max-width: 640px;
       margin: 0 auto 30px auto;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+      border-radius: 16px;
       overflow: hidden;
     }
-    video {
+
+    .custom-video-wrapper video {
       width: 100%;
       height: auto;
-      border-radius: 10px;
+      display: block;
+      border-radius: 16px;
+      filter: brightness(1.1) contrast(1.1);
     }
+
+    .custom-play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255, 215, 0, 0.85);
+      color: black;
+      border: none;
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+      font-size: 28px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+      z-index: 2;
+    }
+
+    .custom-play-button:hover {
+      transform: translate(-50%, -50%) scale(1.1);
+      background-color: #ffd700;
+    }
+
     h1 {
       font-size: 6vw;
       margin-bottom: 20px;
       color: #FFD700;
     }
+
     p {
       font-size: 4.5vw;
       max-width: 600px;
       margin: 0 auto 30px auto;
     }
+
     strong.brand { color: #FFD700; font-weight: bold; }
+
     @media (min-width: 768px) {
       h1 { font-size: 30px; }
       p { font-size: 18px; }
@@ -105,14 +137,31 @@
   <h1>Добро пожаловать!</h1>
   <p>Узнай, как изменить свою жизнь с маркетплейсом <strong class="brand">Lemon Mall</strong></p>
 
-  <div class="video-container">
-    <video controls autoplay muted playsinline>
+  <div class="custom-video-wrapper">
+    <video id="myVideo">
       <source src="videos/video1.mp4" type="video/mp4">
       Ваш браузер не поддерживает видео.
     </video>
+    <button id="playPauseBtn" class="custom-play-button">▶</button>
   </div>
 
   <a href="video2.html" class="button blue">Да, интересно</a>
   <a href="https://wa.me/77085080140" class="button red">Не интересно</a>
+
+  <script>
+    const video = document.getElementById('myVideo');
+    const btn = document.getElementById('playPauseBtn');
+
+    btn.addEventListener('click', () => {
+      if (video.paused) {
+        video.play();
+        btn.style.display = 'none';
+      }
+    });
+
+    video.addEventListener('ended', () => {
+      btn.style.display = 'block';
+    });
+  </script>
 </body>
 </html>
