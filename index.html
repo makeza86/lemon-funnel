@@ -28,10 +28,9 @@
     "@type": "VideoObject",
     "name": "Маркетплейс Lemon Mall — Презентация",
     "description": "Узнай, как изменить свою жизнь с маркетплейсом Lemon Mall от HUAGE. Начни зарабатывать с нами уже сегодня!",
-    "thumbnailUrl": "https://i.ytimg.com/vi/4tR7pSda5YQ/maxresdefault.jpg",
+    "thumbnailUrl": "https://lemonmall.kz/images/preview.jpg",
     "uploadDate": "2025-07-15",
-    "embedUrl": "https://www.youtube.com/embed/4tR7pSda5YQ",
-    "contentUrl": "https://www.youtube.com/watch?v=4tR7pSda5YQ",
+    "contentUrl": "https://lemonmall.kz/videos/video1.mp4",
     "publisher": {
       "@type": "Organization",
       "name": "HUAGE Kazakhstan",
@@ -77,12 +76,12 @@
       max-width: 640px;
       margin: 0 auto 30px auto;
       box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
     }
-    iframe {
+    video {
       width: 100%;
-      height: 56.25vw;
-      max-height: 360px;
-      border: none;
+      height: auto;
       border-radius: 10px;
     }
     h1 {
@@ -107,7 +106,10 @@
   <p>Узнай, как изменить свою жизнь с маркетплейсом <strong class="brand">Lemon Mall</strong></p>
 
   <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/4tR7pSda5YQ?rel=0" allowfullscreen></iframe>
+    <video controls autoplay muted playsinline>
+      <source src="videos/video1.mp4" type="video/mp4">
+      Ваш браузер не поддерживает видео.
+    </video>
   </div>
 
   <a href="video2.html" class="button blue">Да, интересно</a>
