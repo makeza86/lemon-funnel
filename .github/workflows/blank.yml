@@ -1,0 +1,6 @@
+name: Disable GitHub Pages
+
+on:
+  push:
+    branches:
+      - none
