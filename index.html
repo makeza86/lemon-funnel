@@ -3,16 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Добро пожаловать в маркетплейс Lemon Mall</title>
+
+  <title>HUAGE & Lemon Mall — международный проект и маркетплейс нового поколения</title>
 
   <!-- SEO мета-теги -->
-  <meta name="description" content="Ежедневный вывод денег, пассивный доход, обладание акций - это всё возможно с партнёрством от Lemon Mall !!! Успей занять своё место и стать партнёром !!!">
-  <meta name="keywords" content="Lemon Mall, HUAGE, маркетплейс, бизнес, автозапчасти, электроавтомобили, сетевой маркетинг, заработок, Baishi Health">
-  <meta name="author" content="HUAGE Kazakhstan">
+  <meta name="description" content="HUAGE & Lemon Mall — международный проект, который объединяет маркетинговую компанию HUAGE и маркетплейс нового поколения Lemon Mall. Узнайте, как работает партнёрская программа и какие возможности получает привилегированный клиент.">
+  <meta name="keywords" content="HUAGE, Lemon Mall, маркетплейс, международный проект, партнёрская программа, привилегированный клиент, Казахстан, СНГ, Baishi Health">
+  <meta name="author" content="HUAGE & Lemon Mall">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Маркетплейс Lemon Mall — старт твоего бизнеса!">
-  <meta property="og:description" content="Всё, что нужно для успеха — в одном месте. Начни сегодня с Lemon Mall.">
+  <meta property="og:title" content="HUAGE & Lemon Mall — международный проект нового поколения">
+  <meta property="og:description" content="Официальная страница проекта HUAGE & Lemon Mall. Короткое видео, ответы на частые вопросы и возможность получить консультацию официального партнёра.">
   <meta property="og:image" content="https://lemonmall.kz/images/preview.jpg">
   <meta property="og:url" content="https://lemonmall.kz">
   <meta property="og:type" content="website">
@@ -27,15 +28,33 @@
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       text-align: center;
-      padding: 40px 20px;
+      padding: 40px 20px 60px;
       background-color: #000;
-      color: white;
+      color: #fff;
       background-image: radial-gradient(circle, rgba(255, 215, 0, 0.25) 1px, transparent 1px);
       background-size: 25px 25px;
     }
+
+    h1 {
+      font-size: 6vw;
+      margin-bottom: 15px;
+      color: #FFD700;
+    }
+    p {
+      font-size: 4.2vw;
+      max-width: 720px;
+      margin: 0 auto 18px auto;
+    }
+    strong.brand { color: #FFD700; font-weight: bold; }
+
+    @media (min-width: 768px) {
+      h1 { font-size: 32px; }
+      p { font-size: 18px; }
+    }
+
     .button {
       padding: 14px 28px;
-      margin: 15px auto;
+      margin: 15px auto 25px;
       font-size: 18px;
       border: none;
       border-radius: 12px;
@@ -43,20 +62,19 @@
       text-decoration: none;
       display: block;
       width: 100%;
-      max-width: 320px;
+      max-width: 340px;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
       transition: transform 0.2s ease, background 0.3s ease;
     }
     .button:hover { transform: translateY(-2px); }
     .blue { background-color: #1E00FF; color: #fff; }
-    .red { background-color: #8B0000; color: #fff; }
 
     .custom-video-wrapper {
       position: relative;
       width: 100%;
       max-width: 640px;
       height: auto;
-      margin: 0 auto 30px auto;
+      margin: 20px auto 20px auto;
       border-radius: 16px;
       overflow: hidden;
       box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
@@ -90,7 +108,7 @@
     .video-button {
       background-color: rgba(255, 215, 0, 0.9);
       border: none;
-      color: black;
+      color: #000;
       font-size: 20px;
       border-radius: 50%;
       width: 48px;
@@ -102,29 +120,10 @@
       box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
       transition: transform 0.2s;
     }
-
-    .video-button:hover {
-      transform: scale(1.1);
-    }
-
-    h1 {
-      font-size: 6vw;
-      margin-bottom: 20px;
-      color: #FFD700;
-    }
-    p {
-      font-size: 4.5vw;
-      max-width: 600px;
-      margin: 0 auto 30px auto;
-    }
-    strong.brand { color: #FFD700; font-weight: bold; }
-    @media (min-width: 768px) {
-      h1 { font-size: 30px; }
-      p { font-size: 18px; }
-    }
+    .video-button:hover { transform: scale(1.1); }
 
     .seo-description {
-      max-width: 700px;
+      max-width: 800px;
       margin: 40px auto 20px auto;
       text-align: left;
       color: #ddd;
@@ -135,44 +134,184 @@
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
     }
+
+    .faq-section {
+      max-width: 800px;
+      margin: 30px auto 20px auto;
+      text-align: left;
+    }
+    .faq-section h2 {
+      color: #FFD700;
+      margin-bottom: 10px;
+    }
+    details {
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 8px;
+      padding: 10px 14px;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+    details summary {
+      font-weight: 600;
+      outline: none;
+    }
+    details p {
+      font-size: 14px;
+      margin: 8px 0 4px 0;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 12px;
+      color: #888;
+    }
   </style>
 </head>
 <body>
-  <h1>Добро пожаловать!</h1>
-  <p>Узнай, как изменить свою жизнь с маркетплейсом <strong class="brand">Lemon Mall</strong></p>
+
+  <h1>HUAGE & Lemon Mall — международный проект нового поколения</h1>
+  <p>
+    Этот сайт создан для тех, кто хочет разобраться, что такое
+    <strong class="brand">HUAGE & Lemon Mall</strong>, как работает партнёрская программа
+    и какие возможности получает привилегированный клиент маркетплейса.
+  </p>
 
   <div class="custom-video-wrapper">
-    <video id="myVideo">
-      <source src="videos/video1.mp4" type="video/mp4">
+    <video id="myVideo" controls>
+      <!-- Замените на актуальный файл с вашим FAQ-видео -->
+      <source src="videos/faq-max.mp4" type="video/mp4">
       Ваш браузер не поддерживает видео.
     </video>
+    <!-- Если хотите оставить кастомные кнопки — раскомментируй блок ниже
     <div class="video-controls">
       <button class="video-button" onclick="rewind()">⏪</button>
       <button class="video-button" onclick="togglePlayPause()" id="playPauseBtn">▶</button>
       <button class="video-button" onclick="stopVideo()">⏹</button>
     </div>
+    -->
   </div>
 
-  <a href="video2.html" class="button blue">Смотреть дальше</a>
+  <!-- Кнопка заявки (WhatsApp или форма) -->
+  <a href="https://wa.me/7700XXXXXXX?text=Здравствуйте%2C+хочу+узнать+подробнее+о+проекте+HUAGE+%26+Lemon+Mall" class="button blue">
+    Оставить заявку на консультацию
+  </a>
 
+  <!-- Короткий блок о проекте -->
   <section class="seo-description">
-    <h2>Описание видео: как начался путь с Lemon Mall</h2>
+    <h2>Коротко о проекте HUAGE & Lemon Mall</h2>
     <p>
-      В этом видео Мадина рассказывает свою личную историю: как она начала искать возможности для собственного дохода и свободы, изучала разные варианты, но везде сталкивалась с рисками, продажами и необходимостью больших вложений. Всё изменилось, когда она узнала о <strong>Lemon Mall</strong> — новом международном <strong>маркетплейсе от компании HUAGE</strong>, который выходит на рынки Казахстана, Узбекистана, Кыргызстана и России.
+      <strong>HUAGE & Lemon Mall</strong> — это международный проект, который объединяет маркетинговую
+      компанию HUAGE и маркетплейс нового поколения Lemon Mall. Проект развивается поэтапно в странах
+      СНГ и других регионах, а партнёры получают статус привилегированных клиентов, доступ к продукции,
+      личный кабинет и возможности для дополнительного дохода.
     </p>
     <p>
-      Lemon Mall — это не просто маркетплейс, а платформа с продукцией <strong>Baishi Health</strong>, автозапчастями, товарами из Китая и партнёрской программой, которая позволяет начать без продаж и без риска. Видео поможет тем, кто ищет новые возможности, думает о <strong>сетевом бизнесе</strong>, хочет <strong>стабильный заработок</strong> и развитие в современной технологичной команде.
-    </p>
-    <p>
-      Если вы ищете, <em>как заработать в интернете</em>, <em>где найти надёжную команду</em>, <em>как начать без продаж</em> — обязательно досмотрите до конца. В следующих видео вы узнаете, как работает платформа, сколько можно зарабатывать и как стать партнёром Lemon Mall уже сегодня.
+      На этой странице вы найдёте короткое видео-объяснение и ответы на самые частые вопросы: кто стоит
+      за проектом, какие есть статусы, как проходит регистрация, в чём отличие от пирамид и кому вообще
+      подходит участие в экосистеме HUAGE & Lemon Mall.
     </p>
   </section>
+
+  <!-- FAQ -->
+  <section class="faq-section" id="faq">
+    <h2>Частые вопросы о HUAGE & Lemon Mall</h2>
+
+    <details>
+      <summary>1. Что такое HUAGE & Lemon Mall?</summary>
+      <p>HUAGE & Lemon Mall — это международный проект, который объединяет маркетинговую компанию HUAGE и маркетплейс нового поколения Lemon Mall, созданный по модели Amazon, Alibaba и Wildberries.</p>
+    </details>
+
+    <details>
+      <summary>2. Это маркетплейс или партнёрская программа?</summary>
+      <p>Это маркетплейс с официальной партнёрской программой, где люди могут стать партнёрами на ранней стадии, развивать свою структуру и получать доход от её товарооборота.</p>
+    </details>
+
+    <details>
+      <summary>3. Кто стоит за этим проектом?</summary>
+      <p>За проектом стоит китайская корпорация Baishi Health Group — компания с 6 собственными заводами, научно-исследовательским центром и официальным филиалом HUAGE, который отвечает за партнёрскую программу и развитие маркетплейса Lemon Mall.</p>
+    </details>
+
+    <details>
+      <summary>4. Что получает человек, став партнёром?</summary>
+      <p>Партнёр получает статус привилегированного клиента маркетплейса, скидки на продукцию, личный кабинет, реферальный код, бонусы за рекомендации и возможность зарабатывать на росте своей структуры.</p>
+    </details>
+
+    <details>
+      <summary>5. Какие есть способы заработка в HUAGE?</summary>
+      <p>Есть несколько уровней дохода: бонусы за приглашённых партнёров, проценты от товарооборота структуры, а также возможность стать акционером проекта.</p>
+    </details>
+
+    <details>
+      <summary>6. Зачем заходить в проект сейчас, а не позже?</summary>
+      <p>Сейчас проект активно развивается в разных странах, и партнёры, которые подключаются на раннем этапе, получают доступ к более широким возможностям и преимуществам.</p>
+    </details>
+
+    <details>
+      <summary>7. Сколько стоит вход в проект?</summary>
+      <p>Вход в проект осуществляется через приобретение одной из трёх скидочных карт HUAGE — серебро, золото или бриллиант. Каждая карта даёт свой уровень статуса и привилегий. Стоимость уточняется у официального партнёра в вашей стране.</p>
+    </details>
+
+    <details>
+      <summary>8. В чём преимущество бриллиантовой карты?</summary>
+      <p>Серебро и золото дают доступ к маркетплейсу, участию в акциях и лотереях, а также бонусам за рекомендации — по желанию. Бриллиантовая карта открывает возможность стать акционером проекта и получать долю от развития экосистемы.</p>
+    </details>
+
+    <details>
+      <summary>9. Как проходит регистрация и что происходит дальше?</summary>
+      <p>Вы заполняете заявку и связываетесь с официальным партнёром вашего региона, который помогает пройти регистрацию и объясняет первые шаги.</p>
+    </details>
+
+    <details>
+      <summary>10. Что будет, если я не хочу приглашать людей?</summary>
+      <p>Вы сохраняете статус привилегированного клиента маркетплейса, пользуетесь продукцией и получаете скидки. А рекомендации — это добровольная возможность сформировать дополнительный, в том числе пассивный, доход.</p>
+    </details>
+
+    <details>
+      <summary>11. Как понять, что проект работает официально?</summary>
+      <p>У компании есть официальная регистрация, открытые офисы в разных странах, собственное приложение и доступная документация, которую можно проверить.</p>
+    </details>
+
+    <details>
+      <summary>12. Это не пирамида? Чем проект отличается?</summary>
+      <p>Нет. Финансовая пирамида не имеет продукта. В HUAGE & Lemon Mall есть маркетплейс, реальные товары, заводы, собственное приложение и официальная партнёрская программа, как у крупных международных компаний.</p>
+    </details>
+
+    <details>
+      <summary>13. В каких странах работает проект?</summary>
+      <p>Проект активно развивается в Киргизии, Казахстане, России, Узбекистане, Таджикистане и других странах. Проект международный.</p>
+    </details>
+
+    <details>
+      <summary>14. Когда маркетплейс заработает полностью?</summary>
+      <p>Приложение уже работает, товары загружаются, и полный запуск проходит поэтапно в разных странах.</p>
+    </details>
+
+    <details>
+      <summary>15. Чем этот проект отличается от других?</summary>
+      <p>Главная цель HUAGE & Lemon Mall — сделать премиальные товары доступнее за счёт прямых поставок от производителей. Это позволит удерживать цены ниже конкурентов и обеспечить быструю логистику.</p>
+    </details>
+
+    <details>
+      <summary>16. Кому подходит этот проект?</summary>
+      <p>Проект подходит людям, которые хотят пользоваться маркетплейсом, развиваться в новой экосистеме и получать дополнительный доход в удобном формате.</p>
+    </details>
+
+    <details>
+      <summary>17. Что нужно сделать прямо сейчас?</summary>
+      <p>Связаться с официальным партнёром, задать свои вопросы и оформить партнёрство, если формат вам подходит. Для связи используйте кнопку выше.</p>
+    </details>
+  </section>
+
+  <footer>
+    HUAGE & Lemon Mall. Информация на сайте носит ознакомительный характер и не является публичной офертой или гарантией дохода.
+  </footer>
 
   <script>
     const video = document.getElementById('myVideo');
     const playPauseBtn = document.getElementById('playPauseBtn');
 
     function togglePlayPause() {
+      if (!video || !playPauseBtn) return;
       if (video.paused) {
         video.play();
         playPauseBtn.textContent = '⏸';
@@ -183,18 +322,97 @@
     }
 
     function stopVideo() {
+      if (!video || !playPauseBtn) return;
       video.pause();
       video.currentTime = 0;
       playPauseBtn.textContent = '▶';
     }
 
     function rewind() {
+      if (!video) return;
       video.currentTime = Math.max(0, video.currentTime - 10);
     }
 
-    video.addEventListener('ended', () => {
-      playPauseBtn.textContent = '▶';
-    });
+    if (video && playPauseBtn) {
+      video.addEventListener('ended', () => {
+        playPauseBtn.textContent = '▶';
+      });
+    }
   </script>
+
+  <!-- Структурированные данные для ИИ и поисковиков -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "HUAGE & Lemon Mall",
+    "url": "https://lemonmall.kz"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "HUAGE & Lemon Mall",
+    "url": "https://lemonmall.kz",
+    "description": "Международный проект, который объединяет маркетинговую компанию HUAGE и маркетплейс нового поколения Lemon Mall.",
+    "areaServed": ["KZ","RU","KG","UZ","TJ"],
+    "brand": [
+      { "@type": "Brand", "name": "HUAGE" },
+      { "@type": "Brand", "name": "Lemon Mall" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Что такое HUAGE & Lemon Mall?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "HUAGE & Lemon Mall — это международный проект, который объединяет маркетинговую компанию HUAGE и маркетплейс нового поколения Lemon Mall, созданный по модели крупных мировых площадок."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Это маркетплейс или партнёрская программа?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Это маркетплейс с официальной партнёрской программой, где люди могут стать партнёрами на ранней стадии, развивать структуру и получать доход от её товарооборота."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Кто стоит за этим проектом?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "За проектом стоит китайская корпорация Baishi Health Group и её официальный филиал HUAGE, которые отвечают за развитие маркетплейса Lemon Mall."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Что получает человек, став партнёром?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Партнёр получает статус привилегированного клиента маркетплейса, скидки, личный кабинет, реферальный код и возможность получать бонусы за рекомендации и рост структуры."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Это пирамида?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Нет. В отличие от финансовых пирамид, в проекте HUAGE & Lemon Mall есть реальный маркетплейс, товары, заводы, приложение и официальная партнёрская программа."
+        }
+      }
+    ]
+  }
+  </script>
+
 </body>
 </html>
