@@ -65,7 +65,7 @@
       color: var(--text-main);
       line-height: 1.6;
       background-color: var(--bg-main);
-      /* Мягкий премиум-фон с золотыми крупицами (вариант A) */
+      /* Премиум-фон с “золотыми крупицами” */
       background-image:
         radial-gradient(circle at 0% 0%, rgba(246,199,60,0.23) 0, transparent 55%),
         radial-gradient(circle at 100% 100%, rgba(246,199,60,0.18) 0, transparent 55%),
@@ -133,10 +133,11 @@
 
     .header-center {
       text-align: center;
-      font-weight: 800;           /* жирнее */
+      font-weight: 800;
       font-size: 16px;
-      letter-spacing: 0.08em;     /* чуть шире */
+      letter-spacing: 0.08em;
       color: #ffffff;
+      text-transform: uppercase;
     }
 
     .header-right {
@@ -240,7 +241,7 @@
       background: #151515;
     }
 
-    /* ---------- FORM ---------- */
+    /* ---------- SECTIONS ---------- */
     .section {
       padding: 28px 0;
     }
@@ -260,13 +261,20 @@
       margin: 0 auto 20px;
     }
 
+    /* ---------- FORM ---------- */
     .form-card {
       max-width: 800px;
       margin: 0 auto;
-      background: var(--bg-card);
-      border-radius: 16px;
-      border: 1px solid var(--border-soft);
+      border-radius: 18px;
       padding: 22px 20px 20px;
+      /* шампанский фон + подсветка */
+      background:
+        radial-gradient(circle at top left, rgba(255, 245, 214, 0.24), transparent 65%),
+        linear-gradient(135deg, rgba(56, 44, 20, 0.98), rgba(118, 92, 34, 0.98));
+      border: 1px solid var(--gold);
+      box-shadow:
+        0 0 24px rgba(246,199,60,0.40),
+        0 18px 40px rgba(0,0,0,0.75);
     }
 
     .form-grid {
@@ -280,7 +288,7 @@
       flex-direction: column;
       gap: 5px;
       font-size: 14px;
-      color: var(--text-soft);
+      color: #f7f1df;
     }
 
     .form-field label span {
@@ -290,19 +298,20 @@
     input, select {
       padding: 9px 10px;
       border-radius: 8px;
-      border: 1px solid rgba(255,255,255,0.16);
-      background: #070710;
+      border: 1px solid rgba(255,255,255,0.26);
+      background: rgba(6,6,10,0.95);
       color: var(--text-main);
       font-size: 14px;
       outline: none;
     }
 
     input::placeholder {
-      color: #555770;
+      color: #8b8da0;
     }
 
     input:focus, select:focus {
       border-color: var(--gold-soft);
+      box-shadow: 0 0 8px rgba(246,199,60,0.6);
     }
 
     .form-footer {
@@ -314,7 +323,8 @@
 
     .form-note {
       font-size: 12px;
-      color: var(--text-soft);
+      color: #f0e4c9;
+      opacity: 0.9;
     }
 
     .btn-primary {
@@ -327,6 +337,7 @@
       font-size: 15px;
       font-weight: 600;
       cursor: pointer;
+      box-shadow: 0 0 14px rgba(246,199,60,0.7);
     }
 
     /* ---------- PROFILE ---------- */
@@ -457,25 +468,6 @@
       color: var(--text-soft);
     }
 
-    /* ---------- BIG WHATSAPP BUTTON ---------- */
-    .big-whatsapp-section {
-      padding: 10px 0 10px;
-    }
-
-    .big-whatsapp-btn {
-      display: block;
-      width: fit-content;
-      margin: 20px auto 0;
-      padding: 14px 28px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, #34d16e, #1ba851);
-      color: #ffffff;
-      font-size: 17px;
-      font-weight: 700;
-      text-align: center;
-      box-shadow: 0 0 14px rgba(0,0,0,0.6);
-    }
-
     /* ---------- FOOTER ---------- */
     .footer {
       border-top: 1px solid rgba(255,255,255,0.08);
@@ -514,8 +506,8 @@
     }
 
     .social-links img {
-      width: 60%;
-      height: 60%;
+      width: 75%;
+      height: 75%;
       object-fit: contain;
     }
 
@@ -540,11 +532,12 @@
     }
 
     @media (max-width: 720px) {
-      .header-center {
-        display: none;
-      }
       .header-inner {
         gap: 12px;
+      }
+      .header-center {
+        font-size: 13px; /* на мобилке поменьше, но видно */
+        letter-spacing: 0.06em;
       }
       .hero h1 {
         font-size: 23px;
@@ -675,106 +668,7 @@
       </div>
     </section>
 
-    <!-- PROFILE -->
-    <section class="section">
-      <div class="container">
-        <h2>Кто будет с вами на связи</h2>
-        <p class="section-sub">
-          С вами работает официальный партнёр HUAGE & Lemon Mall, который сам прошёл путь в проекте
-          и помогает другим зайти безопасно и осознанно.
-        </p>
-
-        <div class="profile-card">
-          <div class="profile-photo-wrap">
-            <!-- ТВОЁ ФОТО -->
-            <img src="images/max-barin.jpg" alt="Макс Барин" class="profile-photo" />
-          </div>
-          <div>
-            <div class="profile-name">Макс Барин</div>
-            <div class="profile-role">Официальный партнёр HUAGE & Lemon Mall, IT и маркетинг</div>
-            <p class="profile-text">
-              Я помогаю людям разобраться в проекте HUAGE & Lemon Mall простым языком:
-              без сложных схем, агрессивных продаж и завышенных обещаний.
-              Моя задача — объяснить, подходит ли вам проект и как зайти максимально безопасно.
-            </p>
-            <ul class="profile-bullets">
-              <li>Объясняю модель проекта шаг за шагом.</li>
-              <li>Помогаю зарегистрироваться и настроить личный кабинет.</li>
-              <li>Подсказываю, как комбинировать онлайн-инструменты, соцсети и маркетплейс.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- INFO BLOCKS -->
-    <section class="section">
-      <div class="container">
-        <h2>Что важно знать о проекте</h2>
-        <p class="section-sub">
-          Ниже — несколько ключевых фактов о HUAGE & Lemon Mall. Эти блоки помогают быстро понять суть,
-          прежде чем вы перейдёте к подробному FAQ.
-        </p>
-
-        <div class="info-grid">
-          <div class="info-card">
-            <div class="info-icon">1</div>
-            <div class="info-title">Что за экосистема?</div>
-            <p>
-              HUAGE & Lemon Mall — это сочетание маркетинговой компании HUAGE и маркетплейса Lemon Mall
-              по модели Amazon, Alibaba и других международных площадок.
-            </p>
-          </div>
-
-          <div class="info-card">
-            <div class="info-icon">2</div>
-            <div class="info-title">Кому подходит?</div>
-            <p>
-              Тем, кто хочет пользоваться продукцией, развивать сеть, получать бонусы
-              и строить долгосрочный доход через официальную партнёрскую программу.
-            </p>
-          </div>
-
-          <div class="info-card">
-            <div class="info-icon">3</div>
-            <div class="info-title">Почему важно время?</div>
-            <p>
-              Проект развивается по странам, и ранние партнёры получают больше возможностей:
-              места в структуре, доступ к обучению и рост вместе с запуском маркетплейса.
-            </p>
-          </div>
-
-          <div class="info-card">
-            <div class="info-icon">4</div>
-            <div class="info-title">Есть ли продукт?</div>
-            <p>
-              Да. Реальные товары, производство, приложение и бренды. Это отличает проект
-              от классических финансовых пирамид без продукта.
-            </p>
-          </div>
-
-          <div class="info-card">
-            <div class="info-icon">5</div>
-            <div class="info-title">Где уже есть партнёры?</div>
-            <p>
-              Казахстан, Кыргызстан, Россия, Узбекистан, Таджикистан и другие страны СНГ.
-              Проект изначально строится как международная платформа.
-            </p>
-          </div>
-
-          <div class="info-card">
-            <div class="info-icon">6</div>
-            <div class="info-title">Что дальше после заявки?</div>
-            <p>
-              Вы общаетесь с партнёром, получаете ответы на вопросы,
-              после чего спокойно решаете, хотите ли вы присоединиться к экосистеме.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
+    <!-- FAQ (СРАЗУ ПОСЛЕ ФОРМЫ) -->
     <section class="section">
       <div class="container">
         <h2>Частые вопросы о HUAGE & Lemon Mall</h2>
@@ -929,14 +823,102 @@
       </div>
     </section>
 
-    <!-- WHATSAPP CTA ПОСЛЕ FAQ -->
-    <section class="big-whatsapp-section">
+    <!-- PROFILE (ПОСЛЕ FAQ) -->
+    <section class="section">
       <div class="container">
-        <a class="big-whatsapp-btn"
-           href="https://wa.me/7700XXXXXXX?text=Здравствуйте%2C+хочу+узнать+подробнее+о+проекте+HUAGE+%26+Lemon+Mall"
-           target="_blank" rel="noopener">
-          Связаться с официальным партнёром в WhatsApp
-        </a>
+        <h2>Кто будет с вами на связи</h2>
+        <p class="section-sub">
+          С вами работает официальный партнёр HUAGE & Lemon Mall, который сам прошёл путь в проекте
+          и помогает другим зайти безопасно и осознанно.
+        </p>
+
+        <div class="profile-card">
+          <div class="profile-photo-wrap">
+            <!-- ТВОЁ ФОТО -->
+            <img src="images/max-barin.jpg" alt="Макс Барин" class="profile-photo" />
+          </div>
+          <div>
+            <div class="profile-name">Макс Барин</div>
+            <div class="profile-role">Официальный партнёр HUAGE & Lemon Mall, IT и маркетинг</div>
+            <p class="profile-text">
+              Я помогаю людям разобраться в проекте HUAGE & Lemon Mall простым языком:
+              без сложных схем, агрессивных продаж и завышенных обещаний.
+              Моя задача — объяснить, подходит ли вам проект и как зайти максимально безопасно.
+            </p>
+            <ul class="profile-bullets">
+              <li>Объясняю модель проекта шаг за шагом.</li>
+              <li>Помогаю зарегистрироваться и настроить личный кабинет.</li>
+              <li>Подсказываю, как комбинировать онлайн-инструменты, соцсети и маркетплейс.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INFO BLOCKS (ПОСЛЕ КАРТОЧКИ) -->
+    <section class="section">
+      <div class="container">
+        <h2>Что важно знать о проекте</h2>
+        <p class="section-sub">
+          Ниже — несколько ключевых фактов о HUAGE & Lemon Mall. Эти блоки помогают быстро понять суть,
+          прежде чем вы перейдёте к подробному FAQ.
+        </p>
+
+        <div class="info-grid">
+          <div class="info-card">
+            <div class="info-icon">1</div>
+            <div class="info-title">Что за экосистема?</div>
+            <p>
+              HUAGE & Lemon Mall — это сочетание маркетинговой компании HUAGE и маркетплейса Lemon Mall
+              по модели Amazon, Alibaba и других международных площадок.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">2</div>
+            <div class="info-title">Кому подходит?</div>
+            <p>
+              Тем, кто хочет пользоваться продукцией, развивать сеть, получать бонусы
+              и строить долгосрочный доход через официальную партнёрскую программу.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">3</div>
+            <div class="info-title">Почему важно время?</div>
+            <p>
+              Проект развивается по странам, и ранние партнёры получают больше возможностей:
+              места в структуре, доступ к обучению и рост вместе с запуском маркетплейса.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">4</div>
+            <div class="info-title">Есть ли продукт?</div>
+            <p>
+              Да. Реальные товары, производство, приложение и бренды. Это отличает проект
+              от классических финансовых пирамид без продукта.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">5</div>
+            <div class="info-title">Где уже есть партнёры?</div>
+            <p>
+              Казахстан, Кыргызстан, Россия, Узбекистан, Таджикистан и другие страны СНГ.
+              Проект изначально строится как международная платформа.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">6</div>
+            <div class="info-title">Что дальше после заявки?</div>
+            <p>
+              Вы общаетесь с партнёром, получаете ответы на вопросы,
+              после чего спокойно решаете, хотите ли вы присоединиться к экосистеме.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -947,7 +929,7 @@
     <div class="container">
       <div class="footer-top">
         <div class="social-links">
-          <!-- ЗДЕСЬ КРАСИВЫЕ КРУГЛЫЕ ИКОНКИ -->
+          <!-- ПОДСТАВЬ СВОИ РЕАЛЬНЫЕ ССЫЛКИ -->
           <a href="https://youtube.com/@lemonmall_huage" target="_blank" rel="noopener" aria-label="YouTube">
             <img src="images/icon-youtube.png" alt="YouTube" />
           </a>
