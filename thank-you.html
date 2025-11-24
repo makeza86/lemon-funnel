@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Заявка отправлена — HUAGE & Lemon Mall</title>
+
+  <style>
+    :root {
+      --bg-main: #050509;
+      --gold: #f6c73c;
+      --gold-soft: #ffd76a;
+      --text-main: #ffffff;
+      --text-soft: #b7b7c4;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: radial-gradient(circle at top, #2a2010 0, #050509 40%, #000 100%);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .confetti {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        radial-gradient(circle, rgba(246,199,60,0.55) 0, transparent 55%),
+        radial-gradient(circle, rgba(255,255,255,0.18) 0, transparent 55%);
+      background-size: 14px 14px, 18px 18px;
+      mix-blend-mode: screen;
+      opacity: 0;
+      animation: confettiFade 2.8s ease-out forwards;
+    }
+
+    @keyframes confettiFade {
+      0% { opacity: 0; transform: translateY(-20px); }
+      15% { opacity: 1; }
+      100% { opacity: 0; transform: translateY(20px); }
+    }
+
+    .card {
+      position: relative;
+      max-width: 460px;
+      width: 90%;
+      padding: 26px 22px 24px;
+      border-radius: 24px;
+      background:
+        radial-gradient(circle at top left, rgba(255,245,214,0.24), transparent 60%),
+        linear-gradient(135deg, rgba(30,24,12,0.98), rgba(60,44,18,0.98));
+      border: 1px solid rgba(246,199,60,0.9);
+      box-shadow:
+        0 0 26px rgba(246,199,60,0.75),
+        0 26px 60px rgba(0,0,0,0.9);
+      text-align: center;
+      animation: cardIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      transform: translateY(30px) scale(0.96);
+      opacity: 0;
+    }
+
+    @keyframes cardIn {
+      to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+    }
+
+    .badge {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      margin: 0 auto 14px;
+      background:
+        conic-gradient(from 220deg, #ffe9a9, #f6c73c, #f1b51f, #ffe9a9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: 0 0 24px rgba(246,199,60,0.9);
+      animation: spinLight 4s linear infinite;
+    }
+
+    .badge-inner {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: #050509;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+    }
+
+    @keyframes spinLight {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    h1 {
+      font-size: 22px;
+      margin: 4px 0 6px;
+      color: var(--gold);
+    }
+
+    .subtitle {
+      font-size: 15px;
+      color: var(--text-soft);
+      margin-bottom: 14px;
+    }
+
+    .highlight {
+      font-size: 14px;
+      color: #fff5d6;
+      background: rgba(0,0,0,0.45);
+      padding: 8px 10px;
+      border-radius: 12px;
+      border: 1px solid rgba(246,199,60,0.5);
+      margin-bottom: 14px;
+    }
+
+    .small {
+      font-size: 13px;
+      color: var(--text-soft);
+      margin-bottom: 18px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .btn-main {
+      border: none;
+      cursor: pointer;
+      border-radius: 999px;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+      color: #000;
+      box-shadow: 0 0 18px rgba(246,199,60,0.8);
+    }
+
+    .btn-ghost {
+      border-radius: 999px;
+      padding: 9px 18px;
+      font-size: 13px;
+      border: 1px solid rgba(246,199,60,0.5);
+      background: transparent;
+      color: var(--text-soft);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-main span,
+    .btn-ghost span {
+      font-size: 16px;
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 19px;
+      }
+      .card {
+        padding: 22px 18px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="confetti"></div>
+
+  <div class="card">
+    <div class="badge">
+      <div class="badge-inner">✔</div>
+    </div>
+    <h1>Поздравляем! Заявка отправлена</h1>
+    <div class="subtitle">
+      Официальный партнёр <strong>HUAGE & Lemon Mall</strong> свяжется с вами в ближайшее время.
+    </div>
+    <div class="highlight">
+      Желаем вам удачи, правильных решений и сильного окружения в новом проекте 🚀
+    </div>
+    <div class="small">
+      Если партнёр не ответит в течение 24 часов, вы можете повторно оставить заявку
+      или написать напрямую в WhatsApp.
+    </div>
+
+    <div class="buttons">
+      <a href="https://lemonmall.kz" class="btn-main">
+        <span>←</span> Вернуться на сайт
+      </a>
+      <a href="https://wa.me/77085080140" target="_blank" class="btn-ghost">
+        <span>💬</span> Написать в WhatsApp
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
