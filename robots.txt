@@ -1,3 +1,8 @@
 User-agent: *
 Allow: /
 Sitemap: https://lemonmall.kz/sitemap.xml
+
+User-agent: *
+Disallow: /videos/
+Allow: /
+Sitemap: https://lemonmall.kz/sitemap.xml
