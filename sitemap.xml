@@ -4,17 +4,30 @@
   <!-- Главная страница -->
   <url>
     <loc>https://lemonmall.kz/</loc>
-    <lastmod>2025-01-01</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2025-01-20</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Страница благодарности -->
   <url>
     <loc>https://lemonmall.kz/thank-you.html</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2025-01-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Медиа (видео и фото для ИИ-сканеров и Google Discover) -->
+  <url>
+    <loc>https://lemonmall.kz/images/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://lemonmall.kz/videos/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
   </url>
 
 </urlset>
